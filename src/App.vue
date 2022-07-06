@@ -1,32 +1,55 @@
+
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+    <Navigation />
+    
+    <div class="router">
+      <router-view/>
     </div>
-    <router-view/>
+
+    <Footer />
   </div>
 </template>
 
+<script>
+import Navigation from '@/components/navbar/Navigation.vue'
+import Footer from '@/components/footer/Footer.vue'
+
+export default {
+ name: "App",
+ components: {
+  Navigation,
+  Footer,
+ },
+
+}
+</script>
+
+
+
 <style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;500&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Raleway", sans-serif;
+  font-weight: 400;
+}
+.router {
+  padding-top: 75px;
 }
 
-#nav {
-  padding: 30px;
+.app {
+  min-height: 100vh;
+  position: relative;
+  background-color: #f1f1f1;
+}
 
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
+.container {
+  padding: 0 20px;
+  max-width: 1140px;
+  margin: 0 auto;
 }
 </style>
