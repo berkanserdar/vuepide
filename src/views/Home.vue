@@ -6,20 +6,24 @@
       <div class="menu" >
         <h3 class="menu__head">AVANTAJLI MENÜLER</h3>
             <div class="menu__cards">
-              <div class="card">
+              <div 
+              v-for="menu in menus"
+              :key="menu.id"
+              class="card"
+              >
                 <div class="row g-0">
                   <div class="col-md-4">
                     <img
-                      src="@/assets/acılıLahmacun.jpg"
+                      v-bind:src="menu.img"
                       class="img-fluid rounded-start"
                       alt="..."
                     />
                   </div>
                   <div class="col-md-8">
                     <div class="card-body">
-                      <h5 class="card-title">Tek kişilik efsane</h5>
+                      <h5 class="card-title">{{ menu.name }}</h5>
                       <p class="card-text">
-                        3 lahmacun + 1 içecek <span class="price">30 ₺</span>
+                        {{ menu.contents }} <span class="price">{{ menu.price }} ₺</span>
                       </p>
                     </div>
                     <div class="card__button">
@@ -39,8 +43,20 @@
 // @ is an alias to /src
 
 export default {
+
+  data() {
+    return {
+      menus: []
+    }
+  },
+  mounted() {
+    fetch('http://localhost:3333/menus')
+    .then(res => res.json())
+    .then(data => this.menus = data)
+    .catch(err => console.log(err.message))
+  },
   name: 'Home',
-  components: {}
+  components: {},
 }
 </script>
 
@@ -84,7 +100,8 @@ export default {
 }
 
 .card {
-  max-width: 750px
+  max-width: 750px;
+  margin-bottom: 50px;
 }
 
 .card-text {

@@ -12,25 +12,67 @@
         </div>
       </div>
     </div>
-    <div class="cart__content">
+    <div 
+    v-for="(cart, index) in carts"
+    :key="cart.id"
+    class="cart__content">
       <div class="cart__content__items">
         <div class="card cart__card">
           <div class="card-body">
-          This is some text within a card body.
+            <div class="cart__name">{{cart.name}}</div>
+            <div class="cart__quantity">
+              {{cart.quantity}} Adet
+            </div>
+            <div class="cart__price">
+              {{cart.price}} ₺
+            </div>
           </div>
           <div class="d-grid gap-2 d-md-block cart__buttons">
-          <button class="btn btn-primary extButton" type="button">-1</button>
-          <button class="btn btn-success addButton" type="button">+1</button>
+          <button
+          @click="updateCart(cart, 'subtract')"
+           class="btn btn-primary extButton" type="button">-1</button>
+          <button 
+          @click="updateCart(cart, 'add')"
+          class="btn btn-success addButton" type="button">+1</button>
           </div>
         </div>
-          <div class="cart__dell"><i class="fa-solid fa-trash"></i></div>
+          <button
+          v-on:click="removeFromCart(index)"
+           class="cart__dell"><i class="fa-solid fa-trash"></i></button>
       </div>
+      
     </div>
-    <div class="cart__button mt-3">
-    <div class="receipt">
-      <button type="button" id="myBtn" class="btn btn-primary">Sipariş ver</button>
+
+    <div class="total__price">
+      <p>
+        Toplam Fiyat : 
+        <span 
+        v-if="carts.length"
+        >{{totalTax()}}</span>
+      </p>
     </div>
-    </div>
+    
+    <div>
+    <b-button class="cart__siparis" v-b-modal.modal-1>Sipariş ver</b-button>
+
+    <b-modal id="modal-1" title="Sparişiniz verilmiştir">
+      <div 
+      v-for="cart in carts"
+      :key="cart.id"
+      class="my-4">
+        <p>
+          {{cart.quantity}} adet {{cart.name}}
+        </p>
+        
+      </div>
+      <p>
+        Toplam Fiyat : 
+        <span 
+        v-if="carts.length"
+        >{{totalTax()}}</span>
+      </p>
+    </b-modal>
+  </div>
   </div>
 </template>
 
@@ -39,26 +81,61 @@
 // @ is an alias to /src
 
 export default {
+  data() {
+    return {
+      carts: [],
+    }
+  },
+  mounted() {
+    fetch('http://localhost:3333/carts')
+    .then(res => res.json())
+    .then(data => this.carts = data)
+    .catch(err => console.log(err.message))
+  },
+  methods: {
+    removeFromCart(index){
+      this.carts.splice(index, 1);
+    },
+  totalTax(){
+    return this.carts.reduce((a, b) =>a + b.quantity * b.price, 0)
+  },
+    updateCart(carts, updateType) {
+      for(let i = 0; i < this.carts.length; i++ ) {
+        if( this.carts[i].id === carts.id){
+          if(updateType === 'subtract'){
+            if(this.carts[i].quantity !== 0){
+              this.carts[i].quantity --;
+            }
+          } else {
+            this.carts[i].quantity++;
+          }
+          break;
+          }
+        }
+    }
+  },
   name: 'Cart',
   components: {}
 }
 
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
   .cart {
     max-width: 900px;
   }
   .cart__card{
     flex-direction: row !important;
     align-items: center;
-    max-width: 80%;
+    width: 80%;
   }
   .form-control {
     height: 100px; 
     width: 200px;
   }
-
+  .cart__adress{
+    margin-bottom: 30px;
+  }
   .cart__buttons{
     margin-right: 10px;
   }
@@ -70,7 +147,38 @@ export default {
     background: #198754 !important;
   }
   .cart__content__items {
+    display: flex;
+    margin-bottom: 30px;
+  }
+  .cart__dell{
+    border: none;
+    background: #fff;
+    height: 20px;
+    margin-left: 10px;
+    display: flex;
+    align-self: center;
 
+      i{
+        color:red;
+      }
+  }
+
+  .total__price {
+    border: groove;
+    border-radius: 10px;
+    box-shadow: 5px 5px lightblue;
+    width: 300px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+      p {
+        padding: 10px;
+        text-align: start;
+      }
+  }
+
+  .cart__siparis {
+    background: #e93578;
   }
 
 </style>

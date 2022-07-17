@@ -20,8 +20,7 @@ export default {
  components: {
   Navigation,
   Footer,
- },
-
+ }
 }
 </script>
 
@@ -34,7 +33,7 @@ export default {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: "Raleway", sans-serif;
+  font-family: 'Times New Roman', Times, serif;
   font-weight: 400;
 }
 .router {
