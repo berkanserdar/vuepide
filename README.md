@@ -9,6 +9,8 @@ vue create .
 ```
 npm run serve
 ```
+npx json-server --watch -p 3333 server.json
+```
 
 ### Customize configuration
 See [MockUp](https://app.moqups.com/FYtWmilp0J9R7TjGRecd60g67lE11AOI/view/page/ae973f342).
