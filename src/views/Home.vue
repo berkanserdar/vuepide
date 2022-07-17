@@ -15,7 +15,7 @@
                   <div class="col-md-4">
                     <img
                       v-bind:src="menu.img"
-                      class="img-fluid rounded-start"
+                      class="img-fluid rounded-start menu__cards__img"
                       alt="..."
                     />
                   </div>
@@ -90,7 +90,11 @@ export default {
 .menu__cards {
     margin-bottom: 50px;
 }
-
+.menu__cards__img {
+    width: 240px;
+    height: 168px;
+    padding: 5px;
+}
 .bttn {
     background-color: #e93578 !important;
 }

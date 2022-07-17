@@ -99,12 +99,14 @@ export default {
   totalTax(){
     return this.carts.reduce((a, b) =>a + b.quantity * b.price, 0)
   },
-    updateCart(carts, updateType) {
+    updateCart(carts, updateType, index) {
       for(let i = 0; i < this.carts.length; i++ ) {
         if( this.carts[i].id === carts.id){
           if(updateType === 'subtract'){
-            if(this.carts[i].quantity !== 0){
+            if(this.carts[i].quantity !== 1){
               this.carts[i].quantity --;
+            } else if(this.carts[i].quantity <= 1) {
+              this.carts.splice(index, 1);
             }
           } else {
             this.carts[i].quantity++;
