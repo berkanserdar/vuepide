@@ -4,6 +4,9 @@
 ```
 vue create .
 ```
+```
+vue 2
+```
 
 ### Compiles and hot-reloads for development
 ```
