@@ -24,7 +24,7 @@ See [MockUp](https://app.moqups.com/FYtWmilp0J9R7TjGRecd60g67lE11AOI/view/page/a
 ### Proje sürecindeki gelişmeler
 - İlk başlarda yaptığım hatalar nedeniyle bir çok sorunla karşılaşsam da zamanla Youtube, Stackoverflow gibi yerlerden yardım alarak bir yandan kendimi geliştirdim bir yandan da projemi geliştirdim.
 - Projemde çoğu yeri mockupda yaptığım gibi yapsam da bazı yerlerde proje yapımı esnasında fikir değiştirerek değiştirdim. Örneğin; Navbarı siyah yapmak, Sepetim kısmındaki adres ekleme yeri gibi.
-- Projemde şu an 3 adet sorun bulunmaktadır, Footer, Sepete ekleme ve adres bölümünün kaydı. Ama hataları ufak bir yardım alarak ileride çözebileceğime inanıyorum.
+- Projemde şu an 2 adet sorun bulunmaktadır; Sepete ekleme ve adres bölümünün kaydı. Ama hataları ufak bir yardım alarak ileride çözebileceğime inanıyorum.
 - Projem başlarda çok basit geldiğinden farklı eklentiler de kullanmak istedim bu yüzden json-server da kullanmak istedim. 
 - Projem daha yarım bir proje, bazı şeyleri kaldırmam veya düzenlemem gerekiyor ama bir çok şey kullanmak ve çoğunu tecrübe etmek istediğimden böyle yaptım. Daha da tecrübelendiğim için ileride ne kullanmam gerek, neler gereksiz şimdiden anlamaya başladım.
 - Projemin bazı sayfalarında css bazı sayfalarında scss kullandım. Bunun sebebi scss'e fazla alışamadım, bir companent hazırlarken her elemana class verdiğim için aşağıda tek tek o class'a değer vermek daha da kolay geliyor ama zamanla scss'e de alışmaya çalışacağım.
