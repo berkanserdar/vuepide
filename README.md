@@ -9,6 +9,7 @@ vue create .
 ```
 npm run serve
 ```
+```
 npx json-server --watch -p 3333 server.json
 ```
 
