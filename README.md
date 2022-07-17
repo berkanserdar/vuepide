@@ -2,9 +2,6 @@
 
 ## Project setup
 ```
-vue create .
-```
-```
 vue 2
 ```
 
