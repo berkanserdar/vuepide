@@ -25,7 +25,7 @@
         
       </div>
       <div class="location__map"> 
-        <img class="location__map__google" src="@/assets/harita.png" alt="">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d96245.1294078515!2d28.786898057566653!3d41.07641765009138!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14caafe253f39f9b%3A0x349572fb9a436310!2sEsenler%2F%C4%B0stanbul!5e0!3m2!1str!2str!4v1658058109440!5m2!1str!2str" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
       </div>
       
   </div>
