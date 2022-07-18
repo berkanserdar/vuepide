@@ -1,4 +1,6 @@
 # vuepide
+[Pages](https://berkanserdar.github.io/vuepide/)
+
 
 ## Project setup
 ```
