@@ -122,4 +122,13 @@ iframe {
     width:100%;
     height:100%;
 }
+@media only screen and (max-width: 992px) {
+    .location {
+
+        flex-direction: column;
+
+        align-items: center;
+
+    }
+  }
 </style>
