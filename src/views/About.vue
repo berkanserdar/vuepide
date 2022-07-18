@@ -83,8 +83,8 @@ export default {
     gap: 20px;
     flex-direction: column;
 }
-.location__map__google {
-  width: 320;
+iframe {
+  width: 340px;
   height: 320px;
 }
 
