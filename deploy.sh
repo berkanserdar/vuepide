@@ -16,10 +16,10 @@ git init
 git add -A
 git commit -m 'deploy'
 
-# if you are deploying to https://<USERNAME>.github.io
+# if you are deploying to https://berkanserdar.github.io
 # git push -f git@github.com:berkanserdar/berkanserdar.github.io.git main
 
 # if you are deploying to https://berkanserdar.github.io/<REPO>
-# git push -f git@github.com:berkanserdar/vuepide.git main:gh-pages
+git push -f git@github.com:berkanserdar/vuepide.git main:gh-pages
 
 cd -
