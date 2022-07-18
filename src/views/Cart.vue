@@ -83,15 +83,28 @@
 export default {
   data() {
     return {
-      carts: [],
+      carts: [
+        {
+            "id": 1,
+            "name": "lahmacun",
+            "price": 8,
+            "quantity": 3
+        },
+        {
+            "id": 2,
+            "name": "acılı lahmacun",
+            "price": 9,
+            "quantity": 3
+        }
+        ],
     }
   },
-  mounted() {
-    fetch('http://localhost:3333/carts')
-    .then(res => res.json())
-    .then(data => this.carts = data)
-    .catch(err => console.log(err.message))
-  },
+  // mounted() {
+  //   fetch('http://localhost:3333/carts')
+  //   .then(res => res.json())
+  //   .then(data => this.carts = data)
+  //   .catch(err => console.log(err.message))
+  // },
   methods: {
     removeFromCart(index){
       this.carts.splice(index, 1);

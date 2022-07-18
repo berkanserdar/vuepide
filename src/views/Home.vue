@@ -46,15 +46,97 @@ export default {
 
   data() {
     return {
-      menus: []
+          menus: [
+            
+            {
+                "id": 1,
+                "name": "iki Kişilik Serüven",
+                "contents": "6 adet lahmacun + 1L içecek",
+                "price": 50,
+                "quantity": 0,
+                "img": "https://d3vkdqr0qjxhag.cloudfront.net/sbarro/4lu_lahmacun_menu_477d7a9f43.webp"
+            },
+            {
+                "id": 2,
+                "name": "iki Kişilik Acılı Serüven",
+                "contents": "6 adet acılı lahmacun + 1L içecek",
+                "price": 50,
+                "quantity": 0,
+                "img": "https://d3vkdqr0qjxhag.cloudfront.net/sbarro/4lu_lahmacun_menu_477d7a9f43.webp"
+            },
+            {
+                "id": 3,
+                "name": "Aile Boyu Lezzet",
+                "contents": "10 adet lahmacun + 2.5L içecek",
+                "price": 90,
+                "quantity": 0,
+                "img": "https://d3vkdqr0qjxhag.cloudfront.net/sbarro/4lu_lahmacun_menu_477d7a9f43.webp"
+            },
+            {
+                "id": 4,
+                "name": "Aile Boyu İkiz Lezzet",
+                "contents": "5 adet lahmacun + 5 adet acılı lahmacun + 2.5L içecek",
+                "price": 90,
+                "quantity": 0,
+                "img": "https://d3vkdqr0qjxhag.cloudfront.net/sbarro/4lu_lahmacun_menu_477d7a9f43.webp"
+            },
+            {
+                "id": 5,
+                "name": "Kral İkili",
+                "contents": "2 adet Karışık Pide + 2 adet Kıymalı Pide + 1L içecek",
+                "price": 50,
+                "quantity": 0,
+                "img": "https://d3vkdqr0qjxhag.cloudfront.net/usta-pideci/kiymali_pide_menu_9c049cd950.webp"
+            },
+            {
+                "id": 6,
+                "name": "Kral İkili 2",
+                "contents": "2 adet Karışık Pide + 2 adet Yumurtalı Pide + 1L içecek",
+                "price": 50,
+                "quantity": 0,
+                "img": "https://d3vkdqr0qjxhag.cloudfront.net/usta-pideci/kusbasili_kasarli_pide_menu_7e2fe9ea69.webp"
+            },
+            {
+                "id": 7,
+                "name": "Kral İkili 3",
+                "contents": "2 adet Karışık Pide + 2 adet Kaşarlı Pide + 1L içecek",
+                "price": 50,
+                "quantity": 0,
+                "img": "https://d3vkdqr0qjxhag.cloudfront.net/usta-pideci/usta_karisik_pide_menu_3e86fe9080.webp"
+            },
+            {
+                "id": 8,
+                "name": "Kral İkili 4",
+                "contents": "2 adet Kıymalı Pide + 2 adet Yumurtalı Pide + 1L içecek",
+                "price": 50,
+                "quantity": 0,
+                "img": "https://d3vkdqr0qjxhag.cloudfront.net/usta-pideci/patatesli_pide_menu_f12a73de6c.webp"
+            },
+            {
+                "id": 9,
+                "name": "Kral İkili 5",
+                "contents": "2 adet Kıymalı Pide + 2 adet Kaşarlı Pide + 1L içecek",
+                "price": 50,
+                "quantity": 0,
+                "img": "https://d3vkdqr0qjxhag.cloudfront.net/usta-pideci/kiymali_pide_menu_9c049cd950.webp"
+            },
+            {
+                "id": 10,
+                "name": "Kral İkili 6",
+                "contents": "2 adet Yumurtalı Pide + 2 adet Kaşarlı Pide + 1L içecek",
+                "price": 50,
+                "quantity": 0,
+                "img": "https://www.serifebaci.com/thumb/resimler/urun/-1584351681.69541.png/w600/h600"
+            }
+      ]
     }
   },
-  mounted() {
-    fetch('http://localhost:3333/menus')
-    .then(res => res.json())
-    .then(data => this.menus = data)
-    .catch(err => console.log(err.message))
-  },
+  // mounted() {
+  //   fetch('http://localhost:3333/menus')
+  //   .then(res => res.json())
+  //   .then(data => this.menus = data)
+  //   .catch(err => console.log(err.message))
+  // },
   name: 'Home',
   components: {},
 }
