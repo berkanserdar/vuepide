@@ -1,4 +1,6 @@
 # vuepide
+[Pages](https://berkanserdar.github.io/vuepide/)
+
 
 ## Project setup
 ```
@@ -27,7 +29,7 @@ See [MockUp](https://app.moqups.com/FYtWmilp0J9R7TjGRecd60g67lE11AOI/view/page/a
 - Projemde şu an 2 adet sorun bulunmaktadır; Sepete ekleme ve adres bölümünün kaydı. Ama hataları ufak bir yardım alarak ileride çözebileceğime inanıyorum.
 - Projem başlarda çok basit geldiğinden farklı eklentiler de kullanmak istedim bu yüzden json-server da kullanmak istedim. 
 - Projem daha yarım bir proje, bazı şeyleri kaldırmam veya düzenlemem gerekiyor ama bir çok şey kullanmak ve çoğunu tecrübe etmek istediğimden böyle yaptım. Daha da tecrübelendiğim için ileride ne kullanmam gerek, neler gereksiz şimdiden anlamaya başladım.
-- Projemin bazı sayfalarında css bazı sayfalarında scss kullandım. Bunun sebebi scss'e fazla alışamadım, bir companent hazırlarken her elemana class verdiğim için aşağıda tek tek o class'a değer vermek daha da kolay geliyor ama zamanla scss'e de alışmaya çalışacağım.
+- Projemin bazı sayfalarında css bazı sayfalarında scss kullandım. Bunun sebebi scss'e fazla alışamadım ve bir companent hazırlarken her elemana class verdiğim için aşağıda tek tek o class'a değer vermek daha da kolay geliyor ama zamanla scss'e de alışmaya çalışacağım.
 
 ### Proje ile ilgili duygu ve düşüncelerim
 - İlk büyük projem olduğu için eksikliklerini saymazsak memnün kaldım. Proje sürecinde "yapamayacağım" stresi ile mücadele etmem ve gerekirse çok alakasız yerlerden kodlar alıp kendime uyarlayıp sürekli sürekli denemeye çalışmam beni bu projeye ve bu mesleğe daha da bağladı. Her an yeni bir şeyler keşfetmek, bazı insanların 2014'den bile yazılarını görmek, başkalarının da benzer yerlerde takıldığını yorumlarında ona yardımcı olanları görmek ve o yanıtları kendime uyarlamak güzel bir hisdi. Uzun süre takıldığın ve stres yaratan sorunu araştırmak ve bazen 5-10 yerden aldığın toplama bilgiyle çözebilmek en sonunda güzel bir his bırakıyor. Genel iş arama stresiyle de birleşince kötü olsa da proje bazlı düşününce eğlenceli ve eğitici bir süreçti.
