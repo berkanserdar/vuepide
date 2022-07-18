@@ -107,4 +107,10 @@ footer {
   .socials {
     text-align: end;
   }
+@media only screen and (max-width: 992px) {
+    .footer-basic {
+      display: none;
+    }
+  }
+
 </style>
